@@ -9,13 +9,12 @@
 </template>
   
 <script setup lang="ts">
-  import { ref, computed } from 'vue';
+  import { ref } from 'vue';
   import { useNotesStore, NotesStoreType, INote } from '../store/notes'; 
 
   const notesStore: NotesStoreType = useNotesStore();
   
   const searchQuery: Ref<string> = ref('');
-  const allNotes: Ref<INote> = ref([]);
   
   const searchNotes = (): void => {
     notesStore.filterNotes(searchQuery.value);

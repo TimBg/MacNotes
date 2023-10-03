@@ -1,3 +1,7 @@
 {
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "types": ["node", "markdown-it"],
+  },
   "extends": "./.nuxt/tsconfig.json"
 }

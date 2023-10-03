@@ -13,10 +13,10 @@
 </template>
 
 <script setup lang="ts">
-  const MarkdownIt = require('markdown-it');
-  const markdownStyle = require('markdown-it-style');
+  import MarkdownIt from 'markdown-it';
+  import markdownStyle from 'markdown-it-style';
 
-  import { ref, computed, watch, withDefaults, onMounted, Ref } from 'vue';
+  import { ref, computed, watch, onMounted, Ref } from 'vue';
   import { useNotesStore, NotesStoreType } from '~/store/notes';
   import { getTextAttributes } from '~/utils/text'
 
