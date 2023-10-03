@@ -63,7 +63,7 @@
 
 
   const showDeleteModal = (note: INote): void => {
-    const userConfirmation = window.confirm('Are you sure you want to delete this note?');
+    const userConfirmation = window.confirm('Are you sure want to delete this note?');
     if (userConfirmation) {
       notesStore.deleteNote(note.id);
     }
