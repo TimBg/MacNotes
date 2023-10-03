@@ -33,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-  import { ref, watch } from 'vue';
+  import { ref, watch, computed } from 'vue';
 
   import SideBar from './components/SideBar.vue';
   import SearchBar from './components/SearchBar.vue';

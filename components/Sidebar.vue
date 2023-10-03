@@ -36,7 +36,7 @@
 </template>
 
 <script setup lang="ts">
-  import { ref, nextTick, computed } from 'vue';
+  import { computed } from 'vue';
 
   import { useNotesStore, NotesStoreType, INote } from '../store/notes'; 
   import { convertToHHMM } from '../utils/date'
@@ -45,7 +45,6 @@
 
   const displayedNotes = computed(() => notesStore.displayedNotes);
   const notes = computed(() => notesStore.notes);
-  const selectedNoteId = computed(() => notesStore.selectedNoteId);
 
   const props = defineProps({
     showDeleteModal: Function,
