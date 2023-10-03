@@ -3,7 +3,6 @@
     <textarea 
       v-if="isEditMode" 
       v-model="unrenderedNoteContent" 
-      @input="updateNote"
     ></textarea>
     
     <div 
@@ -14,10 +13,10 @@
 </template>
 
 <script setup lang="ts">
-  import { ref, computed, watch, withDefaults, onMounted, Ref } from 'vue';
-  import MarkdownIt from 'markdown-it';
-  import markdownStyle from 'markdown-it-style';
+  const MarkdownIt = require('markdown-it');
+  const markdownStyle = require('markdown-it-style');
 
+  import { ref, computed, watch, withDefaults, onMounted, Ref } from 'vue';
   import { useNotesStore, NotesStoreType } from '~/store/notes';
   import { getTextAttributes } from '~/utils/text'
 
@@ -76,10 +75,12 @@
   });
 
   const updateCurrentNote = (title: string, description: string, text: string): void => {
+    if(!notesStore.currentNote) return;
+
     notesStore.currentNote.title = title.substring(0, 30);
     notesStore.currentNote.description = description;
     notesStore.currentNote.content = text;
-    notesStore.currentNote.lastModified = new Date();
+    notesStore.currentNote.lastModified = +new Date();
     notesStore.updateNote(notesStore.currentNote);
   }
 

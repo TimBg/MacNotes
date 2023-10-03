@@ -53,7 +53,7 @@
 
   const deleteSelectedNote = (): void => {
     const index: number = notes.value.findIndex((note: INote) => note.selected);
-    if (index !== -1) {
+    if (index !== -1 && props.showDeleteModal) {
       props.showDeleteModal(notes.value[index]);
     }
   }
