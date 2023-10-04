@@ -48,7 +48,7 @@
   const selectedNoteId = computed(() => notesStore.selectedNoteId);
 
   const noteEditorRef = ref(null); 
-  let isEditing = ref(false);
+  const isEditing = ref(false);
 
   watch(selectedNoteId, (newId, oldId) => {
     if (newId !== oldId) {
@@ -145,5 +145,25 @@
     width: 24px;
     height: 24px;
     cursor: pointer;
+  }
+
+  @media (max-width: 600px) {
+    .app-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main-content {
+      width: 100%;
+      padding: 5px 0;
+    }
+
+    .main-header {
+      padding: 0px 25px;
+    }
+
+    .note-time-container {
+      text-align: center;
+    }
   }
 </style>

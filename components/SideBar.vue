@@ -83,8 +83,9 @@
   }
 
   .sidebar {
+    min-width: 287px;
     width: calc(100% / 5);
-    height: 100vh;
+    max-height: 100vh;
     display: flex;
     flex-direction: column;
     border-right: 1px solid #C8C8C8;
@@ -148,5 +149,21 @@
 
   .description {
     color: #979797;
+  }
+
+  @media (max-width: 600px) {
+    .sidebar {
+      min-width: 287px;
+      width: 100%;
+      max-height: none;
+      display: flex;
+      flex-direction: column;
+      border-right: none;
+      border-bottom: 1px solid #C8C8C8;;
+    }
+
+    li:last-child {
+      margin-bottom: 10px;
+    }
   }
 </style>

@@ -133,5 +133,6 @@
     padding: 20px;
     background-color: white;
     box-sizing: border-box;
+    overflow: hidden;
   }
 </style>
