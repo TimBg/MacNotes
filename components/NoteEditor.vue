@@ -25,18 +25,18 @@
   });
   
   md.use(markdownStyle, {
-    'h1': 'font-size:32px;color:black',
-    'h2': 'font-size:24px;color:black',
-    'h3': 'font-size:20px;color:black',
-    'h4': 'font-size:18px;color:black',
-    'h5': 'font-size:16px;color:black',
-    'h6': 'font-size:14px;color:black',
-    'p': 'font-size:16px;color:black',
-    'ul': 'list-style-type:disc',
-    'ol': 'list-style-type:decimal',
-    'li': 'font-size:16px;color:black',
-    'blockquote': 'border-left:6px solid #e0e0e0;padding-left:40px;margin-top: 15px;font-style:italic;',
-    'div': 'margin-bottom: 5px'
+    'h1': 'font-size:32px;color:black;margin-bottom: 7px',
+    'h2': 'font-size:24px;color:black;margin-bottom: 7px',
+    'h3': 'font-size:20px;color:black;margin-bottom: 7px',
+    'h4': 'font-size:18px;color:black;margin-bottom: 7px',
+    'h5': 'font-size:16px;color:black;margin-bottom: 7px',
+    'h6': 'font-size:14px;color:black;margin-bottom: 7px',
+    'p': 'font-size:16px;color:black;margin-bottom: 7px',
+    'ul': 'margin-bottom: 7px; margin-left: 15px',
+    'ol': 'list-style-type:decimal;margin-bottom: 7px;margin-left: 15px',
+    'li': 'font-size:16px;color:black;margin-bottom: 7px',
+    'blockquote': 'border-left:6px solid #e0e0e0;padding-left:40px;margin-top: 15px;font-style:italic;margin-bottom: 7px',
+    'div': 'margin-bottom: 7px'
   });
 
   const notesStore: NotesStoreType = useNotesStore();
