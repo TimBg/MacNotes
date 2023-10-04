@@ -20,7 +20,9 @@
   import { useNotesStore, NotesStoreType } from '~/store/notes';
   import { getTextAttributes } from '~/utils/text'
 
-  const md = new MarkdownIt();
+  const md = new MarkdownIt({
+    breaks: true,   
+  });
   
   md.use(markdownStyle, {
     'h1': 'font-size:32px;color:black',
