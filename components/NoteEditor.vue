@@ -77,7 +77,7 @@
   const updateCurrentNote = (title: string, description: string, text: string): void => {
     if(!notesStore.currentNote) return;
 
-    notesStore.currentNote.title = title.substring(0, 30);
+    notesStore.currentNote.title = title;
     notesStore.currentNote.description = description;
     notesStore.currentNote.content = text;
     notesStore.currentNote.lastModified = +new Date();

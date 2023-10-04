@@ -126,6 +126,7 @@
     cursor: pointer;
     border-radius: 4px; 
     padding: 8px 10px;
+    overflow: hidden;
   }
 
   .time, .title, .description {
@@ -134,13 +135,6 @@
 
   .note-header {
     margin-bottom: 6px;
-  }
-
-  .note-header .title, .note-footer .description {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;   
   }
 
   .title, .time {
